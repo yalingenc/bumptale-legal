@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BumpTale — Support / Destek / Soporte</title>
+<style>
+  :root {
+    --bg: #FBEAF0;
+    --card: #ffffff;
+    --text: #2b1c22;
+    --muted: #6b5560;
+    --accent: #993556;
+    --accent-bg: #F4C0D1;
+    --border: rgba(153,53,86,0.15);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #201217;
+      --card: #2a1a20;
+      --text: #f3e7ea;
+      --muted: #c8b3ba;
+      --accent: #f4a7c0;
+      --accent-bg: #4a1f2c;
+      --border: rgba(244,167,192,0.2);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  header {
+    padding: 32px 20px 0;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin: 0 0 4px;
+  }
+  .updated {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0 0 20px;
+  }
+  .langs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .lang-btn {
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .lang-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 28px;
+  }
+  .notice {
+    background: var(--accent-bg);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+  }
+  h2 { font-size: 1.25rem; margin-top: 32px; }
+  h2:first-child { margin-top: 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin: 12px 0;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { color: var(--muted); font-weight: 600; }
+  .lang-section { display: none; }
+  .lang-section.active { display: block; }
+  footer {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<header>
+  <p class="brand">BumpTale</p>
+  <div class="langs">
+    <button class="lang-btn active" data-lang="tr" onclick="showLang('tr')">Türkçe</button>
+    <button class="lang-btn" data-lang="en" onclick="showLang('en')">English</button>
+    <button class="lang-btn" data-lang="es" onclick="showLang('es')">Español</button>
+  </div>
+</header>
+<main>
+  <div class="card">
+    <section id="lang-tr" class="lang-section active">
+      <h2>Destek</h2>
+      <div class="notice">Bir sorun mu yaşıyorsun ya da bir sorun var mı? Bize yaz: <a href="mailto:bumptalesupport@gmail.com"><strong>bumptalesupport@gmail.com</strong></a>. E-postana birkaç iş günü içinde yanıt vermeye çalışırız.</div>
+      <h2>Sık sorulanlar</h2>
+      <p><strong>Satın aldığım paket görünmüyor.</strong> Paket ekranında <em>"Satın Almaları Geri Yükle"</em> düğmesine dokun. Satın alma aynı Apple hesabıyla yapılmış olmalı. Hâlâ görünmüyorsa Apple makbuzunu ekleyerek bize yaz.</p>
+      <p><strong>İade istiyorum.</strong> Satın almalar Apple üzerinden yapıldığı için iadeler de Apple tarafından yönetilir: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+      <p><strong>Hesabımı ve verilerimi silmek istiyorum.</strong> Uygulamada Ayarlar &gt; <em>"Hesabımı ve Verilerimi Sil"</em>. İşlem anında gerçekleşir ve geri alınamaz.</p>
+      <p><strong>Verilerimin bir kopyasını istiyorum.</strong> Uygulamada Ayarlar &gt; <em>"Verilerimi İndir"</em>.</p>
+      <p><strong>Gizlilik politikası ve KVKK/GDPR.</strong> <a href="./">Gizlilik Politikası</a></p>
+    </section>
+    <section id="lang-en" class="lang-section">
+      <h2>Support</h2>
+      <div class="notice">Having a problem or a question? Email us at <a href="mailto:bumptalesupport@gmail.com"><strong>bumptalesupport@gmail.com</strong></a>. We aim to reply within a few business days.</div>
+      <h2>Frequently asked questions</h2>
+      <p><strong>My purchase isn't showing up.</strong> Tap <em>"Restore Purchases"</em> on the packages screen. The purchase must have been made with the same Apple account. If it still doesn't appear, email us with your Apple receipt.</p>
+      <p><strong>I'd like a refund.</strong> Purchases are processed by Apple, so refunds are handled by Apple: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+      <p><strong>I want to delete my account and data.</strong> In the app, go to Settings &gt; <em>"Delete My Account and Data"</em>. Deletion is immediate and can't be undone.</p>
+      <p><strong>I want a copy of my data.</strong> In the app, go to Settings &gt; <em>"Download My Data"</em>.</p>
+      <p><strong>Privacy policy and data protection.</strong> <a href="./">Privacy Policy</a></p>
+    </section>
+    <section id="lang-es" class="lang-section">
+      <h2>Soporte</h2>
+      <div class="notice">¿Tienes algún problema o pregunta? Escríbenos a <a href="mailto:bumptalesupport@gmail.com"><strong>bumptalesupport@gmail.com</strong></a>. Intentamos responder en unos pocos días hábiles.</div>
+      <h2>Preguntas frecuentes</h2>
+      <p><strong>No aparece mi compra.</strong> Toca <em>"Restaurar Compras"</em> en la pantalla de paquetes. La compra debe haberse hecho con la misma cuenta de Apple. Si sigue sin aparecer, escríbenos con tu recibo de Apple.</p>
+      <p><strong>Quiero un reembolso.</strong> Las compras se procesan a través de Apple, por lo que los reembolsos los gestiona Apple: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+      <p><strong>Quiero eliminar mi cuenta y mis datos.</strong> En la app, ve a Ajustes &gt; <em>"Eliminar Mi Cuenta y Datos"</em>. La eliminación es inmediata y no se puede deshacer.</p>
+      <p><strong>Quiero una copia de mis datos.</strong> En la app, ve a Ajustes &gt; <em>"Descargar Mis Datos"</em>.</p>
+      <p><strong>Política de privacidad y protección de datos.</strong> <a href="./">Política de Privacidad</a></p>
+    </section>
+  </div>
+</main>
+<footer>
+  BumpTale — Yalın Tansu Genç
+</footer>
+<script>
+  function showLang(lang) {
+    document.querySelectorAll('.lang-section').forEach(function(el) {
+      el.classList.toggle('active', el.id === 'lang-' + lang);
+    });
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    document.documentElement.lang = lang;
+  }
+</script>
+</body>
+</html>
